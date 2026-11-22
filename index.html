@@ -498,11 +498,11 @@
 
         <!-- 5. Unity (30% -> 2 stars) -->
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 shrink-0 rounded-xl bg-[#1B1B22] border border-zinc-500/30 p-2 flex items-center justify-center shadow-md overflow-hidden">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-[#1B1B22] border border-zinc-500/30 p-2.5 flex items-center justify-center shadow-md overflow-hidden">
             <img
-              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Unity_logo.svg/330px-Unity_logo.svg.png"
+              src="https://cdn.simpleicons.org/unity/FFFFFF"
               alt="Unity 아이콘"
-              class="w-full h-full object-contain invert"
+              class="w-full h-full object-contain"
             />
           </div>
           <div>
@@ -566,28 +566,31 @@
     <div id="worksGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </section>
 
-  <!-- ==========================================
-       SECTION 4: 게임 기록 (33 GAME LOGS)
+ <!-- ==========================================
+       SECTION 4: 게임 기록 (63 GAME LOGS - Steam 5h+)
        ========================================== -->
   <section id="gamelog" class="py-20 bg-[#101018] border-t border-[#262638]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <h2 class="section-eng-title text-4xl sm:text-5xl font-bold text-white tracking-[-0.03em]">Game Archive</h2>
-        <p class="section-kor-sub mt-3 text-sm sm:text-base text-zinc-400">다양한 장르의 게임 플레이 경험(33선)을 바탕으로 장르별 타격감과 공간 연출을 분석합니다.</p>
+        <p class="section-kor-sub mt-3 text-sm sm:text-base text-zinc-400">
+          Steam 플레이타임 5시간 이상 기록(총 63선 · 플레이시간 순)을 바탕으로 장르별 사운드 연출을 분석합니다.
+        </p>
       </div>
-      <div class="flex justify-center mb-8">
 
-        <!-- Game Genre Filter -->
-        <div id="gameGenreFilters" class="flex flex-wrap gap-2">
-          <button type="button" data-genre="ALL" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#D1D0EC] text-[#0B0B10] transition-all">전체 (33)</button>
-          <button type="button" data-genre=" 액션 " class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">액션 · 오픈월드</button>
-          <button type="button" data-genre="RPG" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">RPG · 서브컬쳐</button>
-          <button type="button" data-genre="호러" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">서바이벌 호러</button>
+      <!-- Game Genre Filter -->
+      <div class="flex justify-center mb-8">
+        <div id="gameGenreFilters" class="flex flex-wrap justify-center gap-2">
+          <button type="button" data-genre="ALL" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#D1D0EC] text-[#0B0B10] transition-all">전체 (63)</button>
+          <button type="button" data-genre="액션" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">액션 · 어드벤처</button>
+          <button type="button" data-genre="RPG" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">RPG · 오픈월드</button>
           <button type="button" data-genre="시뮬레이션" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">스포츠 · 시뮬레이션</button>
+          <button type="button" data-genre="스토리" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">호러 · 추리 · 스토리</button>
+          <button type="button" data-genre="생존" class="game-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#14141D] text-zinc-300 border border-[#262638] hover:text-white transition-all">생존 · 협동</button>
         </div>
       </div>
 
-      <div id="gamesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+      <div id="gamesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5"></div>
     </div>
   </section>
 
