@@ -187,7 +187,7 @@
         </a>
         <a href="#gamelog" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors flex items-center gap-1.5">
           <span>게임기록</span>
-          <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-white/10 text-zinc-300 font-bold">33</span>
+          <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-white/10 text-zinc-300 font-bold">63</span>
         </a>
       </nav>
 
@@ -919,41 +919,71 @@
       }
     ];
 
-    // 2. Grounded Game Log Data (All 33 titles from Notion)
+  // 2. Grounded Game Log Data (SteamDB 5.0h+ sorted by playtime descending, 63 titles)
     const GAME_LOGS = [
-      { title: "리그오브레전드", genres: "MOBA", filterKey: " 액션 RPG " },
-      { title: "페르소나 5", genres: "서브컬쳐, JRPG", filterKey: "RPG" },
-      { title: "호그와트 레거시", genres: "RPG, 오픈월드, 액션 어드벤처", filterKey: " 액션 RPG " },
-      { title: "GTA 4", genres: "오픈월드, 액션 어드벤처, TPS", filterKey: " 액션 " },
-      { title: "GTA 5", genres: "오픈월드, 액션 어드벤처, TPS", filterKey: " 액션 " },
-      { title: "몬스터헌터: 월드", genres: "헌팅액션", filterKey: " 액션 " },
-      { title: "더 위쳐", genres: "RPG", filterKey: "RPG" },
-      { title: "더 위쳐 3: 와일드 헌터", genres: "오픈월드, RPG", filterKey: " 액션 RPG " },
-      { title: "바인딩 오브 아이작", genres: "로그라이크", filterKey: " 액션 " },
-      { title: "스타듀밸리", genres: "RPG", filterKey: "RPG 시뮬레이션" },
-      { title: "레드 데드 리뎀션", genres: "오픈월드, 액션 어드벤처", filterKey: " 액션 " },
-      { title: "톰 클랜시의 더 디비전 2", genres: "RPG, TPS", filterKey: " 액션 RPG " },
-      { title: "어 웨이 아웃", genres: "액션 어드벤처, TPS, 코옵", filterKey: " 액션 " },
-      { title: "플래그 테일: 이노센스", genres: "액션 어드벤처, 서바이벌 호러", filterKey: " 액션 호러 " },
-      { title: "칼리스토 프로토콜", genres: "액션 어드벤처, 서바이벌 호러, TPS", filterKey: " 액션 호러 " },
-      { title: "앨런 웨이크", genres: "액션 어드벤처, 서바이벌 호러", filterKey: " 액션 호러 " },
-      { title: "배트맨: 아캄 어사일럼", genres: "액션 어드벤처", filterKey: " 액션 " },
-      { title: "배트맨: 아캄 시티", genres: "액션 어드벤처, 오픈월드", filterKey: " 액션 " },
-      { title: "배트맨: 아캄 나이트", genres: "액션 어드벤처, 오픈월드", filterKey: " 액션 " },
-      { title: "페이크북", genres: "추리 어드벤처, 포인트 앤 클릭", filterKey: "시뮬레이션" },
-      { title: "헤비 레인", genres: "액션 어드벤처, 인터렉티브 무비", filterKey: " 액션 " },
-      { title: "잇 테이크 투", genres: "액션 어드벤처, 코옵", filterKey: " 액션 " },
-      { title: "LA 느와르", genres: "액션 어드벤처", filterKey: " 액션 " },
-      { title: "라이즈 오브 더 툼레이더", genres: "액션 어드벤처, TPS", filterKey: " 액션 " },
-      { title: "세키로: 섀도우 다이 트와이스", genres: "액션 어드벤처, 소울라이크", filterKey: " 액션 " },
-      { title: "문명 5", genres: "전략 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "풋볼 매니저 2020", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "풋볼 매니저 2021", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "풋볼 매니저 2024", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "풋볼 매니저 2026", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "FIFA 21", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "FIFA 22", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" },
-      { title: "FC 25", genres: "스포츠, 시뮬레이션", filterKey: "시뮬레이션" }
+      { title: "Football Manager 2020", hours: "571.0h", genres: "스포츠 · 매니지먼트", filterKey: "시뮬레이션" },
+      { title: "The Witcher 3: Wild Hunt", hours: "174.4h", genres: "오픈월드 · 액션 RPG", filterKey: "RPG 액션" },
+      { title: "Football Manager 2021", hours: "156.0h", genres: "스포츠 · 매니지먼트", filterKey: "시뮬레이션" },
+      { title: "FIFA 22", hours: "132.1h", genres: "스포츠 · 축구", filterKey: "시뮬레이션" },
+      { title: "Persona 5 Royal", hours: "104.7h", genres: "JRPG · 서브컬쳐", filterKey: "RPG 스토리" },
+      { title: "EA SPORTS™ FIFA 21", hours: "74.9h", genres: "스포츠 · 축구", filterKey: "시뮬레이션" },
+      { title: "EA SPORTS FC 25", hours: "68.9h", genres: "스포츠 · 축구", filterKey: "시뮬레이션" },
+      { title: "Monster Hunter: World", hours: "67.5h", genres: "헌팅 액션 · RPG", filterKey: "액션 RPG" },
+      { title: "Grand Theft Auto V Legacy", hours: "65.5h", genres: "오픈월드 · 액션 어드벤처", filterKey: "액션 RPG" },
+      { title: "Sekiro™: Shadows Die Twice", hours: "58.0h", genres: "소울라이크 · 액션", filterKey: "액션" },
+      { title: "Sid Meier's Civilization VI", hours: "53.4h", genres: "4X 턴제 전략", filterKey: "시뮬레이션" },
+      { title: "The Witcher: Enhanced Edition", hours: "51.1h", genres: "다크 판타지 RPG", filterKey: "RPG" },
+      { title: "Stardew Valley", hours: "48.9h", genres: "농장 시뮬레이션 · RPG", filterKey: "시뮬레이션 RPG" },
+      { title: "Hogwarts Legacy", hours: "48.6h", genres: "오픈월드 · 액션 RPG", filterKey: "RPG 액션" },
+      { title: "Batman™: Arkham Knight", hours: "44.3h", genres: "오픈월드 · 액션 어드벤처", filterKey: "액션" },
+      { title: "Marvel's Spider-Man Remastered", hours: "36.8h", genres: "오픈월드 · 히어로 액션", filterKey: "액션" },
+      { title: "Red Dead Redemption 2", hours: "35.4h", genres: "오픈월드 · 액션 어드벤처", filterKey: "액션 RPG" },
+      { title: "L.A. Noire", hours: "32.8h", genres: "느와르 추리 · 어드벤처", filterKey: "스토리 액션" },
+      { title: "Mafia II: Definitive Edition", hours: "29.0h", genres: "범죄 액션 · TPS", filterKey: "액션 스토리" },
+      { title: "Grand Theft Auto IV: The Complete Edition", hours: "26.4h", genres: "오픈월드 · 액션 어드벤처", filterKey: "액션" },
+      { title: "Palworld", hours: "25.2h", genres: "오픈월드 생존 · 크래프팅", filterKey: "생존 RPG" },
+      { title: "UNCHARTED™: Legacy of Thieves Collection", hours: "23.9h", genres: "시네마틱 액션 어드벤처", filterKey: "액션" },
+      { title: "It Takes Two", hours: "21.9h", genres: "2인 협동 · 플랫포머", filterKey: "생존 액션" },
+      { title: "Life is Strange™", hours: "21.8h", genres: "인터랙티브 드라마 · 어드벤처", filterKey: "스토리" },
+      { title: "Tom Clancy's The Division 2", hours: "21.7h", genres: "루트 슈터 · TPS RPG", filterKey: "액션 RPG" },
+      { title: "Rise of the Tomb Raider", hours: "15.6h", genres: "액션 어드벤처 · 탐험", filterKey: "액션" },
+      { title: "STEINS;GATE ELITE", hours: "15.2h", genres: "SF 비주얼 노벨", filterKey: "스토리" },
+      { title: "Euro Truck Simulator 2", hours: "14.9h", genres: "드라이빙 시뮬레이션", filterKey: "시뮬레이션" },
+      { title: "Batman: Arkham City GOTY", hours: "14.3h", genres: "오픈월드 · 액션 어드벤처", filterKey: "액션" },
+      { title: "Raft", hours: "13.9h", genres: "해양 생존 · 협동", filterKey: "생존" },
+      { title: "Core Keeper", hours: "13.9h", genres: "샌드박스 생존 · RPG", filterKey: "생존 RPG" },
+      { title: "Gas Station Simulator", hours: "13.5h", genres: "경영 시뮬레이션", filterKey: "시뮬레이션" },
+      { title: "Remnant II", hours: "13.4h", genres: "소울라이크 · TPS 협동", filterKey: "액션 생존" },
+      { title: "The Secret of Monkey Island: Special Edition", hours: "12.9h", genres: "포인트 앤 클릭 어드벤처", filterKey: "스토리" },
+      { title: "Heavy Rain", hours: "12.9h", genres: "인터랙티브 스릴러", filterKey: "스토리" },
+      { title: "Sherlock Holmes: The Devil's Daughter", hours: "12.8h", genres: "추리 어드벤처", filterKey: "스토리" },
+      { title: "Tomb Raider", hours: "11.7h", genres: "액션 어드벤처 · 생존", filterKey: "액션" },
+      { title: "Mafia II (Classic)", hours: "11.2h", genres: "범죄 액션 · TPS", filterKey: "액션 스토리" },
+      { title: "Grand Theft Auto V Enhanced", hours: "11.0h", genres: "오픈월드 · 액션 어드벤처", filterKey: "액션 RPG" },
+      { title: "A Way Out", hours: "10.6h", genres: "2인 협동 · 스토리 액션", filterKey: "생존 스토리" },
+      { title: "A Plague Tale: Innocence", hours: "10.2h", genres: "잠입 어드벤처 · 다크 스토리", filterKey: "스토리 액션" },
+      { title: "Batman: Arkham Asylum GOTY Edition", hours: "9.9h", genres: "잠입 · 액션 어드벤처", filterKey: "액션" },
+      { title: "Tomb Raider: Legend", hours: "9.5h", genres: "액션 어드벤처", filterKey: "액션" },
+      { title: "Control Ultimate Edition", hours: "9.4h", genres: "초자연 액션 · TPS", filterKey: "액션 스토리" },
+      { title: "LEGO® The Incredibles", hours: "9.4h", genres: "캐주얼 액션 · 어드벤처", filterKey: "액션" },
+      { title: "Watch_Dogs", hours: "9.2h", genres: "오픈월드 해킹 · 액션", filterKey: "액션" },
+      { title: "Alan Wake", hours: "8.9h", genres: "심리 스릴러 · 서바이벌 호러", filterKey: "스토리 액션" },
+      { title: "SOMA", hours: "8.6h", genres: "SF 서바이벌 호러", filterKey: "스토리" },
+      { title: "Mirror's Edge™ Catalyst", hours: "8.4h", genres: "1인칭 파쿠르 · 액션", filterKey: "액션" },
+      { title: "Half-Life", hours: "8.1h", genres: "클래식 SF FPS", filterKey: "액션" },
+      { title: "Papers, Please", hours: "7.5h", genres: "서류 심사 · 디스토피아 시뮬레이션", filterKey: "시뮬레이션 스토리" },
+      { title: "Operation Tango", hours: "7.4h", genres: "2인 협동 · 스파이 퍼즐", filterKey: "생존" },
+      { title: "Grounded", hours: "7.4h", genres: "오픈월드 생존 · 협동", filterKey: "생존" },
+      { title: "The Great Ace Attorney Chronicles", hours: "6.9h", genres: "법정 추리 · 비주얼 노벨", filterKey: "스토리" },
+      { title: "Tomb Raider: Anniversary", hours: "6.6h", genres: "액션 어드벤처 · 퍼즐", filterKey: "액션" },
+      { title: "The Spike", hours: "6.5h", genres: "배구 스포츠 · 아케이드", filterKey: "시뮬레이션" },
+      { title: "Sleeping Dogs: Definitive Edition", hours: "6.5h", genres: "오픈월드 격투 · 액션", filterKey: "액션" },
+      { title: "Mirror's Edge", hours: "6.2h", genres: "1인칭 파쿠르 · 액션", filterKey: "액션" },
+      { title: "To the Moon", hours: "5.9h", genres: "스토리 중심 어드벤처 · RPG", filterKey: "스토리 RPG" },
+      { title: "BioShock Infinite", hours: "5.2h", genres: "스토리 중심 FPS", filterKey: "액션 스토리" },
+      { title: "Horizon Zero Dawn™ Complete Edition", hours: "5.2h", genres: "오픈월드 · 액션 RPG", filterKey: "RPG 액션" },
+      { title: "Undertale", hours: "5.1h", genres: "인디 RPG · 탄막", filterKey: "RPG 스토리" },
+      { title: "Chained Together", hours: "5.0h", genres: "협동 플랫포머 · 등반", filterKey: "생존" }
     ];
 
     // Application State
@@ -1175,7 +1205,7 @@
         .join("");
     }
 
-    // Render Games Grid
+    // Render Games Grid (Title + Playtime Badge + Core Genre)
     function renderGames() {
       const grid = document.getElementById("gamesGrid");
       if (!grid) return;
@@ -1188,16 +1218,23 @@
       grid.innerHTML = filtered
         .map(
           (game, idx) => `
-          <div class="flex items-center justify-between p-3.5 rounded-xl bg-[#14141D] border border-[#262638] hover:border-[#9FA4D1]/50 transition-colors">
-            <div class="flex items-center gap-3 min-w-0">
-              <span class="w-6 h-6 shrink-0 rounded-md bg-white/5 text-zinc-400 font-mono text-[11px] flex items-center justify-center">
-                ${String(idx + 1).padStart(2, "0")}
+          <div class="flex flex-col justify-between gap-2.5 p-4 rounded-xl bg-[#14141D] border border-[#262638] hover:border-[#9FA4D1]/60 transition-colors">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span class="w-6 h-6 shrink-0 rounded-md bg-white/5 text-zinc-400 font-mono text-[11px] flex items-center justify-center">
+                  ${String(idx + 1).padStart(2, "0")}
+                </span>
+                <span class="text-sm font-bold text-white leading-snug break-keep">${game.title}</span>
+              </div>
+              <span class="shrink-0 px-2.5 py-0.5 rounded-full bg-[#D1D0EC]/15 border border-[#D1D0EC]/30 text-[#D1D0EC] font-mono text-xs font-bold">
+                ${game.hours}
               </span>
-              <span class="text-sm font-bold text-white truncate">${game.title}</span>
             </div>
-            <span class="ml-2 shrink-0 text-[11px] px-2 py-0.5 rounded bg-[#D1D0EC]/10 text-[#D1D0EC] font-medium">
-              ${game.genres}
-            </span>
+            <div class="pl-8">
+              <span class="inline-block text-[11px] px-2 py-0.5 rounded bg-white/5 text-zinc-300 font-medium">
+                ${game.genres}
+              </span>
+            </div>
           </div>
         `
         )
