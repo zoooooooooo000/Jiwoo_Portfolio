@@ -727,8 +727,34 @@
   <script>
     // 1. Grounded Portfolio Works Data (20 unique projects sorted by YouTube upload date descending)
     const PORTFOLIO_WORKS = [
-      {
+     {
         id: 1,
+        title: "[Sound Design] VFX 스킬 이펙트 사운드 디자인",
+        period: "2026.11.26",
+        categories: ["사운드디자인"],
+        youtubeId: "dxTZJIpKdi0",
+        youtubeUrl: "https://www.youtube.com/watch?v=dxTZJIpKdi0",
+        summary: "VFX 스킬 이펙트 연출의 시각적 질감과 타이밍에 맞춰 사운드를 디자인한 포트폴리오 영상입니다.",
+        process: [
+          "스킬 발동, 전개, 임팩트, 잔향 구간별 VFX 움직임에 맞춰 레이어링과 주파수 밸런스를 설계했습니다."
+        ],
+        credits: "크레딧 : 박지우"
+      },
+      {
+        id: 2,
+        title: "[Sound Design] 인게임 하이라이트",
+        period: "2026.11.25",
+        categories: ["사운드디자인"],
+        youtubeId: "TxYSbk6DAGk",
+        youtubeUrl: "https://www.youtube.com/watch?v=TxYSbk6DAGk",
+        summary: "직접 작업한 인게임 사운드 디자인 주요 장면을 모아 구성한 하이라이트 포트폴리오 영상입니다.",
+        process: [
+          "전투 타격감, 스킬 효과음, 인게임 플레이 흐름에 맞춘 핵심 사운드 연출을 하이라이트로 구성했습니다."
+        ],
+        credits: "크레딧 : 박지우"
+      },
+      {
+        id: 3,
         title: "[Sound Design] 세븐나이츠 리버스: 카일 vs 태오 시네마틱",
         period: "2026.10.16",
         categories: ["사운드디자인"],
@@ -741,7 +767,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 2,
+        id: 4,
         title: "[Sound Design] 누란: 저주의 모래 인게임 사운드 카피",
         period: "2026.09",
         categories: ["사운드디자인"],
@@ -754,7 +780,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 3,
+        id: 5,
         title: "[Sound Design] 나 혼자만 레벨업 해금 연출 및 UI 사운드",
         period: "2026.09.11",
         categories: ["사운드디자인"],
@@ -767,7 +793,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 4,
+        id: 6,
         title: "[Sound Design] 콜 오브 듀티: 모던 워 페어4 총기 사운드",
         period: "2026.09.04",
         categories: ["사운드디자인"],
@@ -780,7 +806,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 5,
+        id: 7,
         title: "[Sound Design] 크기별 공룡 무게감 표현 (엠비언스 제외)",
         period: "2026.08.21",
         categories: ["사운드디자인"],
@@ -793,7 +819,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 6,
+        id: 8,
         title: "[Sound Design] 주펑크(ZOOPUNK) 시네마틱&인게임",
         period: "2026.08.12",
         categories: ["사운드디자인"],
@@ -806,7 +832,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 7,
+        id: 9,
         title: "[Sound Design] 데스 스트랜딩 2 시네마틱",
         period: "2026.06.30",
         categories: ["사운드디자인"],
@@ -819,7 +845,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 8,
+        id: 10,
         title: "[Sound Design] AI로 만든 크리처 모션 사운드 디자인",
         period: "2026.04.28",
         categories: ["사운드디자인", "AI활용"],
@@ -835,7 +861,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 9,
+        id: 11,
         title: "[Unreal] 메타사운드를 활용한 인게임 시스템 구축",
         period: "2026.04.28",
         categories: ["엔진/미들웨어", "AI활용"],
@@ -852,7 +878,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 10,
+        id: 12,
         title: "[Sound Design] 명일방주: 엔드필드 시네마틱",
         period: "2026.04.16",
         categories: ["사운드디자인"],
@@ -867,7 +893,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 11,
+        id: 13,
         title: "[Sound Design/가상악기] 오리와 눈 먼 숲 인게임 트레일러",
         period: "2026.04.16",
         categories: ["사운드디자인", "가상악기"],
@@ -882,7 +908,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 12,
+        id: 14,
         title: "[Sound Design] MENACE 메너스 시네마틱",
         period: "2026.01.22",
         categories: ["사운드디자인"],
@@ -897,7 +923,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 13,
+        id: 15,
         title: "[Sound Design+Foley] 어쌔신 크리드 섀도우스 시네마틱",
         period: "2026.01.18",
         categories: ["사운드디자인"],
@@ -911,7 +937,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 14,
+        id: 16,
         title: "[Sound Design/VST] 붕괴: 스타레일 스킬 사운드",
         period: "2026.01.18",
         categories: ["사운드디자인", "가상악기"],
@@ -926,7 +952,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 15,
+        id: 17,
         title: "[Wwise+Unreal] RTPC, 사이드체인을 활용한 게임 사운드 구현",
         period: "2026.01.05",
         categories: ["엔진/미들웨어", "AI활용"],
@@ -941,7 +967,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 16,
+        id: 18,
         title: "[Wwise+Unreal] 재질과 공간에 따른 사운드 변화 구현",
         period: "2026.01.04",
         categories: ["엔진/미들웨어"],
@@ -955,7 +981,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 17,
+        id: 19,
         title: "발로란트 시네마틱 - 이중성 Sound Design [성우 녹음]",
         period: "2025.12.13",
         categories: ["사운드디자인", "성우녹음"],
@@ -971,7 +997,7 @@
         credits: "녹음 : 박지우, 양푸른 / 성우 : 김채연, 신하얀, 조정서"
       },
       {
-        id: 18,
+        id: 20,
         title: "[Sound Design] AI 활용 영상 제작 및 사운드 디자인",
         period: "2025.11.16",
         categories: ["사운드디자인", "AI활용"],
@@ -986,7 +1012,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 19,
+        id: 21,
         title: "[Sound Design] 세븐나이츠 리버스 시네마틱 -라할 전투- 과거",
         period: "2025.10.10",
         categories: ["사운드디자인"],
@@ -1001,7 +1027,7 @@
         credits: "크레딧 : 박지우"
       },
       {
-        id: 20,
+        id: 22,
         title: "[Sound Design] 연운(Where Winds Meet) 인게임 트레일러",
         period: "2025.09.22",
         categories: ["사운드디자인"],
